@@ -1,6 +1,6 @@
 <?php
-// Edited Werkstatt theme file to add custom text to portfolio masonry links
-// 3 modifications
+// Adds custom link text and inverse gradient effect to portfolio masonries
+// 4 modifications
 $thb_masonry        = get_query_var( 'thb_masonry' ) ? get_query_var( 'thb_masonry' ) : false;
 $thb_grid_type      = get_query_var( 'thb_grid_type' ) ? get_query_var( 'thb_grid_type' ) : 4;
 $thb_size           = get_query_var( 'thb_size' ) ? get_query_var( 'thb_size' ) : false;
@@ -48,6 +48,10 @@ if ( 'custom' === $thb_masonry ) {
 			<div class="thb-placeholder first">
 				<?php the_post_thumbnail( $image_size ); ?>
 				<?php if ( 'thb-gradient-fill-hover' === $thb_hover_style ) { ?>
+					<div class="thb-gradient-fill"></div>
+				<?php } ?>
+				<?php // Add inverse gradient fill markup  - modification 4 
+					if ( 'thb-inverse-gradient-fill-hover' === $thb_hover_style ) { ?>
 					<div class="thb-gradient-fill"></div>
 				<?php } ?>
 			</div>

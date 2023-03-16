@@ -1,6 +1,7 @@
  <?php
 // Adds WPBakery text input for custom portfolio links in sliders and masonries
-// 2 modifications
+// Adds WPBakery style option for inverse gradient fill effect in masonries
+// 3 modifications
 
 $thb_animation_array = array(
 	'type'        => 'dropdown',
@@ -62,6 +63,8 @@ $thb_portfolio_hover_style_array = array(
 	'thb-corner-arrow'        => Thb_Theme_Admin::$thb_theme_directory_uri . '/assets/img/admin/hover_styles/corner-arrow.jpg',
 	'thb-underline-hover'     => Thb_Theme_Admin::$thb_theme_directory_uri . '/assets/img/admin/hover_styles/underline.jpg',
 	'thb-gradient-fill-hover' => Thb_Theme_Admin::$thb_theme_directory_uri . '/assets/img/admin/hover_styles/gradient-fill.jpg',
+	// Add inverse gradient fill option for portfolio masonries - modification 3 
+	'thb-inverse-gradient-fill-hover' => get_stylesheet_directory_uri().'/assets/img/admin/hover_styles/inverse-gradient-fill.jpg',
 	'thb-image-blur'          => Thb_Theme_Admin::$thb_theme_directory_uri . '/assets/img/admin/hover_styles/image-blur.jpg',
 );
 
