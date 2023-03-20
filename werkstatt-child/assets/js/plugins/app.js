@@ -12,7 +12,7 @@
                 target = $('.thb-gradient-fill', _this),
                 rel = $('.portfolio-link', _this),
                 style2 = _this.hasClass('style2'),
-                h = ((_this.outerHeight() - rel.outerHeight() - 10) / _this.outerHeight()) * 100 + '%';
+                h = ((target.outerHeight() - rel.outerHeight()) / target.outerHeight()) * 100 + '%';
                 target.css({'clip-path': 'polygon(0% ' + h + ', 100% ' + h + ', 100% 100%, 0% 100%)'});
                 _this.hoverIntent(function() {
                     gsap.to(target, {

@@ -47,11 +47,8 @@ if ( 'custom' === $thb_masonry ) {
 		<?php } else { ?>
 			<div class="thb-placeholder first">
 				<?php the_post_thumbnail( $image_size ); ?>
-				<?php if ( 'thb-gradient-fill-hover' === $thb_hover_style ) { ?>
-					<div class="thb-gradient-fill"></div>
-				<?php } ?>
-				<?php // Add inverse gradient fill markup  - modification 4 
-					if ( 'thb-inverse-gradient-fill-hover' === $thb_hover_style ) { ?>
+				<?php  // Add inverse gradient fill markup  - modification 4 
+				if ( 'thb-gradient-fill-hover' === $thb_hover_style or 'thb-inverse-gradient-fill-hover' === $thb_hover_style) { ?>
 					<div class="thb-gradient-fill"></div>
 				<?php } ?>
 			</div>

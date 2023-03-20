@@ -34,11 +34,8 @@ $class = array_merge( $class, $portfolio_data['link_class'] );
 			<?php } else { ?>
 				<div class="thb-placeholder">
 					<?php the_post_thumbnail( 'werkstatt-masonry-3x' ); ?>
-					<?php if ( 'thb-gradient-fill-hover' === $thb_hover_style ) { ?>
-						<div class="thb-gradient-fill"></div>
-					<?php } ?>
-					<?php // Add inverse gradient fill markup  - modification 1
-						if ( 'thb-inverse-gradient-fill-hover' === $thb_hover_style ) { ?>
+					<?php  // Add inverse gradient fill markup  - modification 1
+					if ( 'thb-gradient-fill-hover' === $thb_hover_style or 'thb-inverse-gradient-fill-hover' === $thb_hover_style) { ?>
 						<div class="thb-gradient-fill"></div>
 					<?php } ?>
 				</div>
