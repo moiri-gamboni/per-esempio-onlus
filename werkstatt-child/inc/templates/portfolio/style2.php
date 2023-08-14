@@ -1,6 +1,6 @@
 <?php
-// Adds inverse gradient effect to portfolio masonries
-// 1 modification
+// Adds inverse gradient effect and excerpts to portfolio masonries
+// 2 modifications
 
 $thb_masonry     = get_query_var( 'thb_masonry' ) ? get_query_var( 'thb_masonry' ) : false;
 $thb_size        = get_query_var( 'thb_size' ) ? get_query_var( 'thb_size' ) : false;
@@ -45,6 +45,7 @@ $class = array_merge( $class, $portfolio_data['link_class'] );
 			<?php } ?>
 		</div>
 		<h2><span><?php the_title(); ?></span></h2>
-		<aside class="thb-categories"><span><?php echo esc_html( $portfolio_data['categories'] ); ?></span></aside>
+		<aside class="thb-categories"><span><?php // Replace category by excerpt - modification 2
+		if ( has_excerpt() ) {the_excerpt(); }?></span></aside>
 	</div>
 </a>
