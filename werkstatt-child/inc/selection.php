@@ -1,4 +1,7 @@
-<?php function thb_selection() {
+<?php 
+// Shows header background instead of featured image in masonries
+// 1 modification
+function thb_selection() {
 	$id = get_queried_object_id();
 	ob_start();
 	?>
@@ -247,6 +250,7 @@ input[type="submit"],
 			$posts->the_post();
 			$thb_id     = get_the_ID();
 			$main_color = get_post_meta( $thb_id, 'main_color', true );
+      $portfolio_header_bg = get_post_meta( $thb_id, 'portfolio_header_bg', true );
 
 			if ( $main_color ) {
 				?>
@@ -266,7 +270,17 @@ input[type="submit"],
 				background-image: -webkit-linear-gradient(rgba(0,0,0,0),<?php echo esc_attr( $main_color ); ?>);
 				background-image: linear-gradient(rgba(0,0,0,0),<?php echo esc_attr( $main_color ); ?>);
 			}
+      <?php }
+      // Adds background-image to parent and hide featured img child - modification 1
 
+      if ( $portfolio_header_bg ) { 
+        ?>
+      .thb-portfolio #portfolio-<?php echo esc_attr( $thb_id ); ?>.type-portfolio.style1 .portfolio-holder .thb-placeholder {
+          <?php thb_bgoutput( $portfolio_header_bg ); ?>;
+      }
+      .thb-portfolio #portfolio-<?php echo esc_attr( $thb_id ); ?>.type-portfolio.style1 .thb-placeholder img {
+        display: none;
+      }
 				<?php
 			}
 	endwhile;
