@@ -16,6 +16,7 @@ function enqueue_script() {
 function enqueue_templates() {
 	require_once( get_stylesheet_directory() . '/plugin/inc/vc_templates/thb_portfolio_masonry.php');
 	require_once( get_stylesheet_directory() . '/plugin/inc/vc_templates/thb_portfolio_slider.php');
+	require_once( get_stylesheet_directory() . '/plugin/inc/vc_templates/thb_portfolio_carousel.php');
 }
 
 add_action( 'wp_enqueue_scripts', 'enqueue_style' );
