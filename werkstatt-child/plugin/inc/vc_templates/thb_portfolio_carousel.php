@@ -1,4 +1,7 @@
-<?php function custom_thb_portfolio_carousel( $atts, $content = null ) {
+<?php
+// Overrides the number of columns in the portfolio carousel
+// 1 modifications
+function custom_thb_portfolio_carousel( $atts, $content = null ) {
 	$autoplay = $autoplay_speed = '';
 	$atts     = vc_map_get_attributes( 'thb_portfolio_carousel', $atts );
 	extract( $atts );
@@ -36,7 +39,11 @@
 				<?php
 				while ( $posts->have_posts() ) :
 					$posts->the_post(); // start of the loop
-					set_query_var( 'thb_size', 'small-12 medium-6 ' . $columns );
+					// set_query_var( 'thb_size', 'small-12 medium-6 ' . $columns );
+
+					// Set the number of columns manually (small vw = 2 columns, medium = 3, large = 4)
+          // modification 1
+					set_query_var( 'thb_size', 'small-6 medium-4 large-3' );
 					set_query_var( 'thb_title_position', 'title-center' );
 					set_query_var( 'thb_hover_style', $hover_style );
 					set_query_var( 'thb_i', $i );
