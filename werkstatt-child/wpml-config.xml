@@ -1,0 +1,29 @@
+<wpml-config>
+  <shortcodes>
+  <!-- Can't figure out how to make this one work -->
+    <!-- <shortcode>
+      <tag>thb_button_text</tag>
+      <attributes>
+        <attribute type="link">link</attribute>
+      </attributes>
+    </shortcode> -->
+    <shortcode>
+      <tag>thb_portfolio_slider</tag>
+      <attributes>
+        <attribute>thb_link_text</attribute>
+      </attributes>
+    </shortcode>
+    <shortcode>
+      <tag>thb_slidetype</tag>
+      <attributes>
+        <attribute encoding="allow_html_tags">slide_text</attribute>
+      </attributes>
+    </shortcode>
+    <shortcode>
+      <tag>thb_portfolio_masonry</tag>
+      <attributes>
+        <attribute>thb_link_text</attribute>
+      </attributes>
+    </shortcode>
+  </shortcodes>
+</wpml-config>
