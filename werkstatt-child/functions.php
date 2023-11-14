@@ -2,8 +2,25 @@
 function enqueue_style() {
 	wp_enqueue_style( 'werkstatt-child',
 		get_stylesheet_uri(),
-		array( 'werkstatt' ),
-		wp_get_theme()->get( '1.0.0' )
+		array( 'werkstatt' )
+	);
+	wp_enqueue_style( 'home', 
+		get_stylesheet_directory_uri() . '/css/home.css'
+	);
+	wp_enqueue_style( 'contatti', 
+		get_stylesheet_directory_uri() . '/css/contatti.css'
+	);
+	wp_enqueue_style( 'sostenitori', 
+		get_stylesheet_directory_uri() . '/css/sostenitori.css'
+	);
+	wp_enqueue_style( 'sostienici', 
+		get_stylesheet_directory_uri() . '/css/sostienici.css'
+	);
+	wp_enqueue_style( 'header', 
+		get_stylesheet_directory_uri() . '/css/header.css'
+	);
+	wp_enqueue_style( 'inverse_gradient', 
+		get_stylesheet_directory_uri() . '/css/inverse_gradient.css'
 	);
 }
 function enqueue_script() {

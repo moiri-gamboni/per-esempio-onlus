@@ -1,0 +1,33 @@
+#contatti-info .wpb_text_column {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#contatti-info .wpb_text_column p {
+  margin-bottom: 0.5em;
+}
+
+#contatti-socials {
+  padding-top: 2em;
+}
+
+#contatti-socials li {
+  display: inline;
+}
+
+#contatti-socials i {
+  color: black;
+  font-size: 1.6em;
+  padding-right: 0.5em;
+  transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+}
+
+#contatti-socials i:hover {
+  color: #693e89;
+}
+
+@media only screen and (width >= 80em) {
+  #contatti-form {
+    padding: 0 2em;
+  }
+}

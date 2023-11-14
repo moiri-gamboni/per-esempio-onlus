@@ -1,0 +1,12 @@
+#sostenitori-content .thb-team-member img {
+  border: 0.15em solid rgb(100 100 100);
+}
+
+#sostenitori-content .thb-team-member {
+  transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+}
+
+#sostenitori-content .thb-team-member:hover {
+  opacity: 0.6;
+  transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+}

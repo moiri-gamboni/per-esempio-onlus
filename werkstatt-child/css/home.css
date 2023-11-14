@@ -1,0 +1,391 @@
+/* -------------------------- */
+/* Top slider "cosa facciamo" */
+/* -------------------------- */
+
+/* layout */
+#home-slider {
+  margin-bottom: 3em;
+}
+
+#home-slider .carousel,
+#home-slider .portfolio-holder {
+  height: 50vh;
+  height: 50svh;
+  min-height: unset;
+}
+
+/* title */
+#home-slider h1 {
+  margin-bottom: 0;
+}
+
+#home-slider .portfolio-link {
+  padding: 2em;
+  margin: 0;
+  /* add gradient background to make title legible */
+  background: linear-gradient(
+    to bottom,
+    transparent calc(50vh - 8em),
+    rgb(0 0 0 / 40%) calc(50vh - 4em)
+  ) !important;
+}
+
+/* hide autoplay timer */
+#home-slider .thb-circular-progress-timer {
+  display: none;
+}
+
+/* 'scopri di piu' arrow */
+#home-slider .regular-arrow {
+  margin-right: 10px;
+  width: 10px;
+}
+
+#home-slider .regular-arrow::after,
+#home-slider .regular-arrow::before {
+  height: 1.5px;
+  width: 4.5px;
+}
+
+#home-slider .regular-arrow span::after {
+  background: #fff;
+  height: 1.5px;
+  left: 2.7px;
+  width: 10px;
+}
+
+/* previous and next nav buttons */
+#home-slider .swiper-button-next {
+  padding-right: 2em;
+  right: 0;
+}
+
+#home-slider .swiper-button-prev {
+  left: 0;
+  padding-left: 2em;
+}
+
+#home-slider .swiper-button-next span {
+  transform: translateX(3.625em);
+}
+
+#home-slider .swiper-button-prev span {
+  transform: translateX(-3.625em);
+}
+
+#home-slider .swiper-nav {
+  height: fit-content;
+  width: fit-content;
+}
+
+#home-slider .swiper-nav span {
+  border-color: #fff;
+  height: 1.625em;
+  width: 1.625em;
+}
+
+#home-slider .swiper-container:hover .swiper-nav span {
+  transform: translateX(0);
+}
+
+#home-slider .swiper-container .swiper-nav span:hover {
+  border-color: #6a3e8b;
+}
+
+#home-slider .thb-arrow {
+  fill: #fff;
+  height: 0.4875em;
+  width: 0.625em;
+}
+
+@media only screen and (width >=80em) {
+  /* layout */
+  #home-slider .carousel,
+  #home-slider .portfolio-holder {
+    height: 100vh;
+    height: 100svh;
+  }
+
+  /* title */
+  #home-slider .portfolio-link {
+    padding: 5em;
+    background: linear-gradient(
+      to bottom,
+      transparent calc(100vh - 14em),
+      rgb(0 0 0 / 40%) calc(100vh - 9em)
+    ) !important;
+  }
+
+  /* 'scopri di piu' arrow */
+  #home-slider .regular-arrow {
+    margin-right: 16px;
+    width: 20px;
+  }
+
+  #home-slider .regular-arrow::after,
+  #home-slider .regular-arrow::before {
+    height: 2px;
+    width: 9px;
+  }
+
+  #home-slider .regular-arrow span::after {
+    height: 2px;
+    left: 0;
+    width: 20px;
+  }
+
+  /* previous and next nav buttons */
+  #home-slider .swiper-button-next {
+    padding: 0 5em 0 3.25em;
+  }
+
+  #home-slider .swiper-button-next span {
+    transform: translateX(8.25em);
+  }
+
+  #home-slider .swiper-button-prev {
+    padding: 0 3.25em 0 5em;
+  }
+
+  #home-slider .swiper-button-prev span {
+    transform: translateX(-8.25em);
+  }
+
+  #home-slider .swiper-nav span {
+    height: 3.25em;
+    width: 3.25em;
+  }
+
+  #home-slider .thb-arrow {
+    height: 0.875em;
+    width: 1.25em;
+  }
+}
+
+/* --------------- */
+/* Project Masonry */
+/* --------------- */
+
+/* titles */
+#home-masonry .thb-categories,
+#home-masonry h2 {
+  color: #fff;
+}
+
+#home-masonry .portfolio-link {
+  padding: 2em;
+}
+
+/* make background lighter */
+#home-masonry .thb-gradient-fill {
+  background-image: linear-gradient(transparent, rgb(0 0 0 / 50%));
+}
+
+@media only screen and (width >=80em) {
+  /* titles */
+  #home-masonry .portfolio-link {
+    padding: 3em 5em;
+  }
+}
+
+/* ------------------------------ */
+/* Banners (newsletter and quote) */
+/* ------------------------------ */
+
+.home-banner {
+  justify-content: center;
+  padding: 0 2em !important;
+  background-color: #ed8a1f;
+}
+
+/* ----- */
+/* Quote */
+/* ----- */
+
+/* layout */
+#home-quote > div {
+  margin: 1em 0 0;
+}
+
+#home-quote h2 {
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+#home-quote span > span {
+  width: 64em;
+}
+
+/* add big quotation marks */
+#home-quote blockquote {
+  margin: 0;
+  padding: 3% 10%;
+  quotes: "“" "”" "‘" "’";
+}
+
+#home-quote h2::after,
+#home-quote h2::before {
+  font-family: Mulish, serif;
+  font-size: 2em;
+  position: absolute;
+}
+
+#home-quote h2::before {
+  content: open-quote;
+  left: 0.5em;
+  top: 0;
+}
+
+#home-quote h2::after {
+  bottom: 0;
+  content: close-quote;
+  right: 0.5em;
+}
+
+#home-quote span {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (width >=80em) {
+  /* layout */
+  #home-quote > div {
+    margin: 3em 0 1em;
+  }
+
+  #home-quote h2::after,
+  #home-quote h2::before {
+    font-size: 3em;
+  }
+
+  #home-quote h2 {
+    /* check after removing other !important font-sizes */
+    font-size: 2em !important;
+  }
+}
+
+/* ---------- */
+/* Newsletter */
+/* ---------- */
+
+/* layout */
+#home-newsletter > div {
+  margin: 1.5em 0;
+}
+
+#home-newsletter .newsletter-title h1 {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+#home-newsletter .newsletter-description span {
+  text-align: justify;
+}
+
+/* form */
+#home-newsletter .wpb_content_element {
+  margin: 0;
+}
+
+#home-newsletter #newsletter-form-contents {
+  justify-content: center;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding-top: 1em;
+}
+
+#home-newsletter #newsletter-form-contents .btn-text {
+  font-size: 1em !important;
+  display: flex;
+}
+
+#home-newsletter #newsletter-form-contents a::after {
+  border: none;
+}
+
+#home-newsletter #newsletter-form-contents .regular-arrow ::after,
+#home-newsletter #newsletter-form-contents .regular-arrow::after,
+#home-newsletter #newsletter-form-contents .regular-arrow::before {
+  background-color: #fff;
+}
+
+#home-newsletter #newsletter-form-contents a {
+  color: #fff;
+}
+
+#home-newsletter #newsletter-form-contents input {
+  color: #fff;
+  font-size: 1em;
+  min-width: 20ch;
+  padding-bottom: 0;
+  border-color: rgb(255 255 255 / 60%);
+}
+
+#home-newsletter #newsletter-form-contents input:focus {
+  border-color: #6a3e8b;
+}
+
+#home-newsletter #newsletter-form-contents input::placeholder {
+  color: #fff;
+  text-align: center;
+}
+
+#home-newsletter #newsletter-form-contents p {
+  text-align: center;
+  margin: 0;
+}
+
+#home-newsletter #newsletter-form-button {
+  position: relative;
+  left: 1em;
+}
+
+#home-newsletter #newsletter-form-button a {
+  position: absolute;
+  width: max-content;
+  line-height: 2;
+}
+
+#home-newsletter .privacy-policy {
+  color: white !important;
+  text-transform: none !important;
+  font-size: 0.7em !important;
+  padding-top: 1.5em;
+}
+
+#home-newsletter .privacy-policy::before {
+  background: none !important;
+}
+
+#home-newsletter .privacy-policy::before,
+#home-newsletter .privacy-policy::after {
+  height: 1px !important;
+}
+
+#home-newsletter .privacy-policy::after {
+  background: rgb(255 255 255 / 40%) !important;
+}
+
+@media only screen and (width >=80em) {
+  /* layout */
+  #home-newsletter > div {
+    margin: 3em 0;
+  }
+
+  #home-newsletter #newsletter-form-button input {
+    font-size: 1.2em;
+  }
+
+  #home-newsletter .privacy-policy {
+    font-size: 0.8em !important;
+    padding-top: 2em;
+  }
+}
+
+/* ---- */
+/* News */
+/* ---- */
+#home-news > .columns {
+  padding: 0;
+}

@@ -1,0 +1,30 @@
+/* turns the header white on pages with header padding */
+
+body:has(.page-padding) .header {
+  background: white;
+}
+
+body:has(.page-padding) .header .mobile-toggle > div span {
+  background-color: #6a3e8b;
+}
+
+body:has(.page-padding) .header .thb-full-menu > li > a {
+  /* check after other !important are removed */
+  color: #6a3e8b !important;
+}
+
+body:has(.page-padding) .header .logo-dark {
+  /* check after other !important are removed */
+  opacity: 1 !important;
+}
+
+body:has(.page-padding) .header .logo-light {
+  /* check after other !important are removed */
+  opacity: 0 !important;
+}
+
+body:has(.page-padding) .header #quick_search > svg > path {
+  stroke: #6a3e8b;
+  fill: #6a3e8b;
+  transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+}
