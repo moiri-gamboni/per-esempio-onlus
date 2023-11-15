@@ -72,8 +72,8 @@
   opacity: 1;
   bottom: 0;
   top: auto;
-  justify-content: flex-end;
-  align-items: flex-start;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
   text-align: left;
   background: none !important;
 }
