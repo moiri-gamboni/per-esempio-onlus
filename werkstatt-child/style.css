@@ -103,6 +103,10 @@
   margin: 0;
 }
 
+#subfooter .columns {
+  padding: 0
+}
+
 #subfooter .social {
   margin: 0 0 0 0.5em;
 }
