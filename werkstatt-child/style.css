@@ -35,6 +35,10 @@
   transition:all .25s cubic-bezier(.37,.31,.2,.85)
 }
 
+#mobile-menu a:hover {
+  color: white
+}
+
 #progetti-portfolio .portfolio-inner img {
   border-radius: 50%;
   height: auto;
