@@ -487,12 +487,6 @@ h1 {
   width:100%;
 }
 
-.thb_image_link .thb-image-inner img {
-  height: 37.5vw;
-  min-height: 20vh;
-  object-fit: cover;
-}
-
 .thb-language-switcher {
   font-variant-caps:all-small-caps
 }
@@ -564,6 +558,12 @@ h1 {
 
 .titled-img .thb-image-inner {
   z-index: -1000
+}
+
+.titled-img .thb-image-inner img {
+  height: 37.5vw;
+  min-height: 20vh;
+  object-fit: cover;
 }
 
 .wpb_column.columns.medium-6,
