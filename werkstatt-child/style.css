@@ -489,7 +489,7 @@ h1 {
 
 .thb_image_link .thb-image-inner img {
   height: 37.5vw;
-  min-height: 50vh;
+  min-height: 20vh;
   object-fit: cover;
 }
 
@@ -553,7 +553,7 @@ h1 {
 .titled-img {
   position:relative;
   margin:0;
-  background:linear-gradient(to bottom,transparent calc(max(50vh, 37.5vw) - 8em),rgb(0 0 0 / 40%) calc(max(50vh, 37.5vw) - 3em))
+  background:linear-gradient(to bottom,transparent calc(max(20vh, 37.5vw) - 5em),rgb(0 0 0 / 40%) calc(max(20vh, 37.5vw) - 3em))
 }
 
 .titled-img .thb-image-content {
