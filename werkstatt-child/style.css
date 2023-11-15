@@ -165,7 +165,8 @@ h4 {
   font-weight: unset;
 }
 
-.columns {
+.columns,
+.posts-shortcode .columns {
   margin:0;
   padding:0 2em 0 0
 }
