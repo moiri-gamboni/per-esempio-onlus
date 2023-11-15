@@ -1,5 +1,5 @@
 <?php
-add_filter( 'excerpt_length', 'thb_short_excerpt_length' );
+add_filter( 'excerpt_length', 'thb_default_excerpt_length' );
 
 $vars    = $wp_query->query_vars;
 $columns = array_key_exists( 'columns', $vars ) ? $vars['columns'] : 'large-4';
