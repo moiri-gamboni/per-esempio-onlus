@@ -415,6 +415,14 @@ h1 {
   text-align: justify
 }
 
+.post .post-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
 .project-footer {
   padding-top: 2em;
 }
