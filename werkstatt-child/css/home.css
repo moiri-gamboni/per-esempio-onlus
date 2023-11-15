@@ -173,7 +173,7 @@
 }
 
 #home-masonry .portfolio-link {
-  padding: 2em;
+  padding: 0 2em 2em;
 }
 
 /* make background lighter */
@@ -184,7 +184,7 @@
 @media only screen and (width >=80em) {
   /* titles */
   #home-masonry .portfolio-link {
-    padding: 3em 5em;
+    padding: 0 5em 3em;
   }
 }
 
