@@ -387,11 +387,11 @@
 /* News */
 /* ---- */
 #home-news .columns {
-  padding-right: 1em
+  padding-right: 1em;
 }
 
 @media only screen and (width >=80em) {
   #home-news .columns {
-    padding-right: 2em
+    padding-right: 2em;
   }
 }
