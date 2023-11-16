@@ -1,6 +1,7 @@
 -- remove featured images that are in the body of the post content
 -- 524 updates
 -- + 39 updates
+-- + 11 updates
 UPDATE `template_posts`
 INNER JOIN (
     SELECT enriched_text_posts.`ID`,
@@ -10,16 +11,16 @@ INNER JOIN (
             -- regex pattern matching image paths ignoring size and duplicate qualifiers
             CONCAT(
                 -- prior content and start img tag
-                '(.*)(<img.+?',
+                '(.*)((?U)<img.+',
                 -- base path
-                REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+)?(-scaled)?(-\d+x\d+)?\.([^\.]+)$','\\1'),
-                -- risky duplicate image finder + 
+                REGEXP_REPLACE(image_posts.`guid`,'^((?U).+)(-\\d+)?(-scaled)?(-\\d+x\\d+)?\\.([^\\.]+)$','\\1'),
+                -- risky duplicate image finder +
                 -- maybe scaled, size qualifier and dot
                 '(-\\d+)?(-scaled)?(-\\d+x\\d+)?\\.',
                 -- extension
-                REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+)?(-scaled)?(-\d+x\d+)?\.([^\.]+)$','\\5'),
+                REGEXP_REPLACE(image_posts.`guid`,'^((?U).+)(-\\d+)?(-scaled)?(-\\d+x\\d+)?\\.([^\\.]+)$','\\5'),
                 -- end img tag and later content
-                '.+?\\/>)(.*)'
+                '.+\\/>)(.*)'
             ),
             '\\1\\6') 
         AS `post_content`
@@ -40,12 +41,12 @@ INNER JOIN (
         -- regex pattern matching image paths ignoring size and duplicate qualifiers (e.g. 'image-300x500.jpg', 'image.jpg', 'image-1.jpg', and 'image-1-300x500.jpg' all match)
         CONCAT(
             -- base path
-            REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+)?(-scaled)?(-\d+x\d+)?\.([^\.]+)$','\\1'),
+            REGEXP_REPLACE(image_posts.`guid`,'^((?U).+)(-\\d+)?(-scaled)?(-\\d+x\\d+)?\\.([^\\.]+)$','\\1'),
             -- risky duplicate image finder +
             -- maybe scaled, size qualifier and dot
             '(-\\d+)?(-scaled)?(-\\d+x\\d+)?\\.',
             -- extension
-            REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+)?(-scaled)?(-\d+x\d+)?\.([^\.]+)$','\\5')
+            REGEXP_REPLACE(image_posts.`guid`,'^((?U).+)(-\\d+)?(-scaled)?(-\\d+x\\d+)?\\.([^\\.]+)$','\\5')
         )
 )  AS new_posts
 ON `template_posts`.`ID` = new_posts.`ID`
