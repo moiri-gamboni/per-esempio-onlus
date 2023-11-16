@@ -1,4 +1,4 @@
-<div class="blog-container page-padding header-lateral-padding-off">
+<div class="blog-container header-lateral-padding-off">
 <article itemscope itemtype="http://schema.org/Article" <?php post_class( 'post post-detail style1-detail' ); ?> role="article">
 	<figure class="post-gallery parallax">
 		<div class="parallax_bg"><?php the_post_thumbnail( 'full' ); ?></div>
