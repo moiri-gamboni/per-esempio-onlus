@@ -17,7 +17,7 @@
   padding: 0;
 }
 
-#quick-search,
+#quick_search,
 .thb-full-menu {
   line-height:1
 }
@@ -62,11 +62,6 @@
 
 #progetti-portfolio .portfolio-inner {
   padding-bottom: 100% !important;
-}
-
-#progetti-portfolio .thb-categories {
-  margin-bottom: 0;
-  height: 3em;
 }
 
 #progetti-portfolio .thb-categories {
