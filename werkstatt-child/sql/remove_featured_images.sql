@@ -1,25 +1,27 @@
 -- remove featured images that are in the body of the post content
 -- 524 updates
+-- + 39 updates
 UPDATE `template_posts`
 INNER JOIN (
     SELECT enriched_text_posts.`ID`,
         -- removes the featured image html tag, keeping the rest of the post
         REGEXP_REPLACE(
             enriched_text_posts.`post_content`, 
-            -- regex pattern matching an img tag containing the featured image path ignoring size qualifiers
+            -- regex pattern matching image paths ignoring size and duplicate qualifiers
             CONCAT(
                 -- prior content and start img tag
                 '(.*)(<img.+?',
                 -- base path
-                REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+x\d+)?\.([^\.]+)$','\\1'),
-                -- size qualifier and dot
-                '(-\\d+x\\d+)?\\.',
+                REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+)?(-scaled)?(-\d+x\d+)?\.([^\.]+)$','\\1'),
+                -- risky duplicate image finder + 
+                -- maybe scaled, size qualifier and dot
+                '(-\\d+)?(-scaled)?(-\\d+x\\d+)?\\.',
                 -- extension
-                REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+x\d+)?\.([^\.]+)$','\\3'),
+                REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+)?(-scaled)?(-\d+x\d+)?\.([^\.]+)$','\\5'),
                 -- end img tag and later content
                 '.+?\\/>)(.*)'
             ),
-            '\\1\\4') 
+            '\\1\\6') 
         AS `post_content`
     FROM `template_posts` AS image_posts INNER JOIN (
         -- we need an intermediary table as image paths are stored as posts, not postmeta
@@ -35,14 +37,15 @@ INNER JOIN (
     ON enriched_text_posts.`meta_value`= image_posts.`ID`
     -- filter posts that have the featured image in the body of the content,
     AND enriched_text_posts.`post_content` REGEXP 
-        -- regex pattern matching image paths ignoring size qualifiers (e.g. 'image-300x500.jpg' and 'image.jpg' both match)
+        -- regex pattern matching image paths ignoring size and duplicate qualifiers (e.g. 'image-300x500.jpg', 'image.jpg', 'image-1.jpg', and 'image-1-300x500.jpg' all match)
         CONCAT(
             -- base path
-            REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+x\d+)?\.([^\.]+)$','\\1'),
-            -- size qualifier and dot
-            '(-\\d+x\\d+)?\\.',
+            REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+)?(-scaled)?(-\d+x\d+)?\.([^\.]+)$','\\1'),
+            -- risky duplicate image finder +
+            -- maybe scaled, size qualifier and dot
+            '(-\\d+)?(-scaled)?(-\\d+x\\d+)?\\.',
             -- extension
-            REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+x\d+)?\.([^\.]+)$','\\3')
+            REGEXP_REPLACE(image_posts.`guid`,'^(.+?)(-\d+)?(-scaled)?(-\d+x\d+)?\.([^\.]+)$','\\5')
         )
 )  AS new_posts
 ON `template_posts`.`ID` = new_posts.`ID`
