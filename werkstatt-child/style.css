@@ -163,7 +163,7 @@ h4 {
 }
 
 .columns,
-.posts-shortcode .columns {
+.row.posts-shortcode .columns {
   margin: 0;
   padding: 0 2em 0 0;
 }
