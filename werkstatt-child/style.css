@@ -398,6 +398,14 @@ h1 {
   position: relative;
 }
 
+.posts-shortcode .post-content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
 .post-gallery a > img {
   height: 100%;
   object-fit: cover;
@@ -419,14 +427,6 @@ h1 {
 
 .post .post-title a {
   text-align: justify;
-}
-
-.post .post-content p {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
 }
 
 .project-footer {
