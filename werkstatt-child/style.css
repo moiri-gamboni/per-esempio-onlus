@@ -466,6 +466,15 @@ h1 {
   border: 0;
 }
 
+.swiper-container .swiper-nav span {
+  border-color: white;
+  background: rgb(106 62 139 / 70%);
+}
+
+.swiper-container .swiper-nav span .thb-arrow {
+  fill: white;
+}
+
 .thb-full-menu li {
   line-height: 1.6;
 }
