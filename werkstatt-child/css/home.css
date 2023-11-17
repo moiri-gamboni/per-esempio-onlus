@@ -88,7 +88,7 @@
   transform: translateX(0);
 }
 
-#home-slider .swiper-container .swiper-nav span:hover {
+#home-slider .swiper-container .swiper-nav:hover span {
   border-color: #6a3e8b;
 }
 
