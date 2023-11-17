@@ -135,7 +135,7 @@
 
 .blog-container .post-gallery {
   height: 37.5vw;
-  min-height: unset;
+  min-height: 250px;
   margin-bottom: 2em !important;
 }
 
@@ -387,8 +387,8 @@ h1 {
   z-index: auto !important;
   background: linear-gradient(
     to bottom,
-    transparent calc(max(50vh, 37.5vw) - 8em),
-    rgb(0 0 0 / 40%) calc(max(50vh, 37.5vw) - 3em)
+    transparent calc(max(250px, 37.5vw) - 8em),
+    rgb(0 0 0 / 40%) calc(max(250px, 37.5vw) - 3em)
   ) !important;
   padding: 0 !important;
 }
@@ -746,8 +746,8 @@ ul {
   .post-gallery {
     background: linear-gradient(
       to bottom,
-      transparent calc(max(50vh, 37.5vw) - 14em),
-      rgb(0 0 0 / 40%) calc(max(50vh, 37.5vw) - 9em)
+      transparent calc(max(250px, 37.5vw) - 14em),
+      rgb(0 0 0 / 40%) calc(max(250px, 37.5vw) - 9em)
     ) !important;
   }
 
