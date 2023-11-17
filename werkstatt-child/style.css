@@ -162,6 +162,14 @@ h4 {
   font-weight: unset;
 }
 
+.cause-area-list img {
+  min-width: 0;
+}
+
+.cause-area-list p {
+   display: flex;
+}
+
 .columns,
 .row.posts-shortcode .columns {
   margin: 0;
