@@ -353,6 +353,19 @@ h1 {
   margin: 2em !important;
 }
 
+.portfolio .post-gallery {
+    background: linear-gradient(
+    to bottom,
+    transparent calc(max(200px, 37.5vw) - 8em),
+    rgb(0 0 0 / 40%) calc(max(200px, 37.5vw) - 3em)
+  ) !important;
+}
+
+.portfolio-detail .post-gallery.parallax {
+  height: 37.5vw;
+  min-height: 200px;
+}
+
 .portfolio-title h1,
 .titled-img .thb-image-content h1,
 .thb-portfolio .btn-text.style6 {
@@ -382,6 +395,10 @@ h1 {
   margin: 0;
   width: fit-content;
   color: white;
+}
+
+.portfolio-title p div {
+  text-align: left !important;
 }
 
 .portfolio-title .align-center {
