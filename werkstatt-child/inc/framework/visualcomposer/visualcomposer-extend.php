@@ -1,4 +1,4 @@
- <?php
+<?php
 // Adds WPBakery text input for custom portfolio links in sliders and masonries
 // Adds WPBakery style option for inverse gradient fill effect in masonries
 // 3 modifications
