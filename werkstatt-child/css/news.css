@@ -1,0 +1,18 @@
+#news-grid {
+  margin-right: 0;
+  max-width: 100%;
+}
+
+#news-grid .columns {
+  padding: 0;
+}
+
+#news-grid .columns .columns {
+  padding: 0 2em 0 0;
+}
+
+@media only screen and (width >=80em) {
+  #news-grid .columns .columns {
+    padding: 0 5em 0 0;
+  }
+}

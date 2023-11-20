@@ -170,8 +170,7 @@ h4 {
    display: flex;
 }
 
-.columns,
-.row.posts-shortcode .columns {
+.columns {
   margin: 0;
   padding: 0 2em 0 0;
 }

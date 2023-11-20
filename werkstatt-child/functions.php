@@ -10,6 +10,9 @@ function enqueue_style() {
 	wp_enqueue_style( 'contatti', 
 		get_stylesheet_directory_uri() . '/css/contatti.css'
 	);
+	wp_enqueue_style( 'news', 
+		get_stylesheet_directory_uri() . '/css/news.css'
+	);
 	wp_enqueue_style( 'sostenitori', 
 		get_stylesheet_directory_uri() . '/css/sostenitori.css'
 	);
