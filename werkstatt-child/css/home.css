@@ -282,6 +282,9 @@
   text-align: justify;
 }
 
+#home-newsletter #newsletter-form-contents a {
+  border: none;
+}
 /* form */
 #home-newsletter .wpb_content_element {
   margin: 0;

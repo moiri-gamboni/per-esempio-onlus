@@ -453,6 +453,52 @@ h1 {
   text-align: justify;
 }
 
+/* Add underline to links in main pages */
+.wpb_text_column a {
+  border-bottom: 2px solid #1f1f1f;
+}
+
+.wpb_text_column a::after {
+  border-bottom: 2px solid #6a3e8b;
+/*  alternative orange color: */
+/*   border-bottom-color: #ed8a1f; */
+}
+
+/* Add underline to links in posts */
+.post .post-content p a:not(.btn, .button, .thb-iconbox)::after {
+  top: 100% !important;
+  border-bottom: 2px solid #6a3e8b;
+  background: none;
+}
+
+/* Some posts have div instead of p */
+/* We exclude divs with a class (such as images in galleries) */
+.post .post-content div a:not(.btn, .button, .thb-iconbox, [class]) {
+	display: inline-block;
+	border-bottom: 2px solid #1f1f1f;
+	transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+}
+
+/* Animate underline using ::after pseudo-element */
+.post .post-content div a:not(.btn, .button, .thb-iconbox, [class])::after {
+	display: block;
+	border-bottom: 2px solid #6a3e8b;
+	content: '';
+	transform: scale(0, 1);
+	transition: all 0.25s cubic-bezier(0.37, 0.31, 0.2, 0.85);
+	transform-origin: 0 0;
+	top: 2px;
+	position: relative;
+}
+
+.post .post-content div a:not(.btn, .button, .thb-iconbox, [class]):hover::after {
+	transform: scale(1, 1);
+}
+/* Fix hover color for subfooter dev socials */
+.page .subfooter a.social:hover {
+  color: #ed8a1f !important;;
+}
+
 .project-footer {
   padding-top: 2em;
 }
